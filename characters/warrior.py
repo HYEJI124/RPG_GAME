@@ -17,5 +17,7 @@ class Warrior(Character):
         self.health -= 5
         print(f'{self.name}님 특수 공격 사용 반동으로 5 HP가 감소')
         print(f'남은 HP: {self.health}')
-        if self.health <= 0:
+        if self.health < 0:
+            self.health = 0
             print('체력을 모두 소진하셨습니다.')
+

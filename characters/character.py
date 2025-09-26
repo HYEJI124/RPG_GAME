@@ -25,7 +25,8 @@ class Character(ABC):
 
     def take_damage(self, damage):
         self.health -= damage
-        if self.health <= 0:
+        if self.health < 0:
+            self.health = 0
             print('체력을 모두 소진하셨습니다.')
         print(f'{self.name}님이(가) {damage}만큼 피해를 입었습니다!')
         print(f'{self.name}님: -{damage} HP,  남은 체력: {self.health} HP')

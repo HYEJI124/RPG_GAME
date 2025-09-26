@@ -20,10 +20,10 @@ class BattleManager:
         enemy_turn_count = 0
 
         while self.player.is_alive() and self.enemy.is_alive():
-            cmd = input('엔터를 누르면 전투를 계속합니다. (q 입력 시 중단): \n')
-            if cmd.lower() == 'q':
-                print('\n게임을 중단했습니다. 패배로 처리됩니다..\n')
-                return False
+            # cmd = input('엔터를 누르면 전투를 계속합니다. (q 입력 시 중단): \n')
+            # if cmd.lower() == 'q':
+            #     print('\n게임을 중단했습니다. 패배로 처리됩니다..\n')
+            #     return False
             
             attacker = turn
             defender = self.enemy if attacker == self.player else self.player
@@ -47,7 +47,7 @@ class BattleManager:
                 attacker.attack(defender)
                 print()
 
-            time.sleep(2)
+            time.sleep(5)
             print()
 
             
